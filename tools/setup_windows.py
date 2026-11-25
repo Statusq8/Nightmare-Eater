@@ -130,6 +130,20 @@ def extract(archive, target, inner=None):
         (content / inner if inner else content).replace(target)
 
 
+def prepare_reference():
+    source = ROOT / "assets/characters/jinhyeok-concept.jpg"
+    target = ROOT / "assets/characters/jinhyeok-approved.png"
+    if not source.is_file() or target.exists():
+        return
+    with tempfile.TemporaryDirectory(dir=target.parent) as scratch:
+        output = Path(scratch) / target.name
+        call(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", source,
+              "-vf", "crop=106:106:549:26,scale=448:448:flags=lanczos",
+              "-frames:v", "1", "-update", "1", output])
+        output.rename(target)
+    print("Prepared the front-facing crop from the approved concept sheet.")
+
+
 def init_env():
     target = ROOT / ".env"
     if not target.exists():
@@ -137,6 +151,7 @@ def init_env():
         print(f"Configured {target}")
     else:
         print(f"Using existing {target}")
+    prepare_reference()
 
 
 def hardware():
@@ -389,6 +404,7 @@ def main():
             print("ComfyUI: workflow and local nodes validated.")
         check_pilot_voice()
     else:
+        prepare_reference()
         config = settings()
         config["text_provider"] = "prepared"
         config["prepared_dir"] = str(ROOT / "youtube" / "storyboards")

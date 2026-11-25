@@ -30,3 +30,6 @@ youtube/voiceover/*
 
 # Portable studio runtimes, model weights and download cache
 .studio-local/
+
+# Reproducible local crop of the committed reference sheet
+/assets/characters/jinhyeok-approved.png
