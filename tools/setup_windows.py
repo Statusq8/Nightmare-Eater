@@ -219,7 +219,7 @@ def server(name, url, endpoint, command, cwd, env=None):
         process = subprocess.Popen([str(item) for item in command], cwd=cwd, env=env,
                                    stdout=log, stderr=subprocess.STDOUT)
         try:
-            for _ in range(120):
+            for _ in range(300):
                 if process.poll() is not None:
                     raise RuntimeError(f"{name} stopped. See {log.name}.")
                 try:
@@ -247,7 +247,7 @@ def run_ollama():
 def run_comfy():
     return server("comfy", COMFY_URL, "/system_stats",
                   [COMFY_PY, COMFY / "main.py", "--listen", "127.0.0.1", "--port", "8189",
-                   "--lowvram", "--preview-method", "none"], COMFY)
+                   "--lowvram", "--offline", "--disable-dynamic-vram", "--preview-method", "none"], COMFY)
 
 
 def install_ollama():
