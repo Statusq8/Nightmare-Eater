@@ -1,6 +1,6 @@
 # Очередь задач
 ## T001 — Подготовить конвейер видеоманхвы
-Статус: READY.
+Статус: DONE. Проверка и блокеры описаны в [PROGRESS.md](PROGRESS.md).
 1. Проверить существующие файлы и сохранить их без изменений.
 2. Подготовить структуру assets/characters, assets/backgrounds, assets/panels, assets/thumbnails, youtube/scripts, youtube/storyboards, youtube/voiceover, tools, output (пустые каталоги закрепить .gitkeep при необходимости).
 3. Создать шаблон раскадровки главы: ID кадра, описание, персонажи, реплика/диктор, длительность, движение камеры, звук, путь к изображению.

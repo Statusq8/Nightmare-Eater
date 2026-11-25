@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+client_secret*.json
+token*.json
+*_token.json
+
+# Local tooling and scratch files
+.venv/
+__pycache__/
+*.py[cod]
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+
+# Generated media and local recordings
+output/*
+!output/.gitkeep
+*.mp4
+*.mov
+*.mkv
+*.webm
+youtube/voiceover/*
+!youtube/voiceover/.gitkeep

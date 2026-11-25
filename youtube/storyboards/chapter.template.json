@@ -1,0 +1,17 @@
+{
+  "chapter": "001",
+  "voiceover": "../voiceover/001.wav",
+  "subtitles": "001.srt",
+  "shots": [
+    {
+      "id": "001-010",
+      "description": "Черновое описание кадра",
+      "characters": [],
+      "narration": "Текст диктора или реплика",
+      "duration": 4,
+      "camera": "push",
+      "sound": null,
+      "image": "../../assets/panels/001/001-010.png"
+    }
+  ]
+}
