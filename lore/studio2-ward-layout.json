@@ -1,0 +1,45 @@
+{
+  "status": "candidate",
+  "basis": "Visual pilot 30s, shots 10–13, 20–22. The exact placement is a production choice.",
+  "coordinate_system": "Normalized room plan. x increases to room right and z toward the back wall. Camera directions may change; object assignments stay in room coordinates.",
+  "room": "Палата",
+  "maximum_bright_fraction": 0.065,
+  "bounds": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "objects": [
+    {
+      "key": "slab",
+      "asset": "металлический стол",
+      "x": 0.49,
+      "z": 0.52,
+      "orientation_deg": 90
+    },
+    {
+      "key": "wheelchair",
+      "asset": "ржавая инвалидная коляска",
+      "x": 0.17,
+      "z": 0.79,
+      "orientation_deg": 25
+    },
+    {
+      "key": "ceiling-bulb",
+      "asset": "одинокая лампочка",
+      "x": 0.49,
+      "z": 0.52,
+      "mount": "ceiling"
+    },
+    {
+      "key": "ward-door",
+      "asset": "Дверь палаты",
+      "x": 0.87,
+      "z": 1,
+      "wall": "back",
+      "aperture_in_pilot": "solid",
+      "aperture_in_source": "unspecified"
+    }
+  ]
+}

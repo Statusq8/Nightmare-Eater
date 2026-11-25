@@ -1,0 +1,223 @@
+{
+  "profile": {
+    "style": "Adult cinematic Korean ink manhwa, realistic anatomy, blue slate shadows, scarce crimson highlights.",
+    "basis": "youtube/storyboards/001-visual-30.json",
+    "reference_image": "assets/characters/jinhyeok-concept.jpg",
+    "last_pilot_backend": "ImageGen managed generation; exact weights and seed not exposed",
+    "local_candidate_workflow": "tools/workflows/sdxl-ipadapter.json",
+    "screening": "CLIP ViT-H/14",
+    "frame_rate": 30,
+    "render_size": [
+      1920,
+      1080
+    ],
+    "camera_weights": {
+      "static": 40,
+      "push": 30,
+      "pan": 20,
+      "parallax": 10
+    },
+    "parallax_default": "disabled pending calibrated deformation QA",
+    "budget_usd": 0
+  },
+  "chapter_001_locations": [
+    ["Квартира Джинхёка", "Кан Джинхёк лежал на кровати в своей маленькой съёмной квартире"],
+    ["Палата", "Его квартира исчезла."],
+    ["Коридор третьего этажа", "Длинный коридор был погружён во мрак."],
+    ["Операционная", "Джинхёк толкнул ближайшую дверь и оказался в операционной."]
+  ],
+  "entities": [
+    {
+      "kind": "character",
+      "name": "Кан Джинхёк",
+      "aliases": [
+        "Джинхёк",
+        "Джинхёка",
+        "Jinhyeok"
+      ],
+      "canon": {
+        "age": 24,
+        "height_cm": 181,
+        "appearance": "Худощавый, бледный, растрёпанные чёрные волосы, тёмно-серые глаза, круги под глазами.",
+        "outfit": "Чёрное худи на молнии, серая футболка, тёмные карго, тёмные кеды."
+      },
+      "voice": "jinhyeok",
+      "assets": [
+        {
+          "path": "assets/characters/jinhyeok-concept.jpg",
+          "slot": "visual/model-sheet",
+          "state": "approved",
+          "source": "Утверждённый концепт-лист автора",
+          "license": "Материал автора проекта"
+        }
+      ],
+      "facts": [
+        [
+          "patient_number",
+          "013",
+          "На его запястье болтался больничный браслет.\n\n**Пациент №013.**"
+        ],
+        [
+          "skill/composure",
+          "Самообладание F",
+          "> Получен пассивный навык: Самообладание F."
+        ],
+        [
+          "skill/absorption",
+          "Поглощение сущности EX",
+          "> Поглощение сущности [EX]"
+        ]
+      ]
+    },
+    {
+      "kind": "voice",
+      "name": "Повествователь",
+      "aliases": [
+        "narrator"
+      ],
+      "voice": "narrator"
+    },
+    {
+      "kind": "system",
+      "name": "Система",
+      "aliases": [
+        "системное уведомление",
+        "системы"
+      ],
+      "voice": "system"
+    },
+    {
+      "kind": "voice",
+      "name": "Голос матери",
+      "aliases": [
+        "голос матери"
+      ],
+      "voice": "mother",
+      "facts": [
+        [
+          "relation",
+          "мать Джинхёка",
+          "Это был голос матери."
+        ]
+      ]
+    },
+    {
+      "kind": "anomaly",
+      "name": "Голос за дверью",
+      "aliases": [
+        "пациент тринадцать"
+      ],
+      "voice": "anomaly"
+    },
+    {
+      "kind": "anomaly",
+      "name": "Хирург кошмаров",
+      "aliases": [
+        "Хирург",
+        "Хирурга"
+      ]
+    },
+    {
+      "kind": "location",
+      "name": "Квартира Джинхёка",
+      "aliases": [
+        "маленькой съёмной квартире",
+        "квартира"
+      ]
+    },
+    {
+      "kind": "location",
+      "name": "Больница Святой Марии",
+      "aliases": [
+        "больница",
+        "больницы"
+      ]
+    },
+    {
+      "kind": "location",
+      "name": "Палата",
+      "assets": [
+        {
+          "path": "lore/studio2-ward-layout.json",
+          "slot": "layout/topology",
+          "state": "candidate",
+          "source": "Черновая география по визуальному пилоту и тексту главы 001",
+          "license": "Материал проекта"
+        },
+        {
+          "path": "output/visual-pilot-30/approved/shot-10.png",
+          "slot": "visual/ward-establishing",
+          "state": "candidate",
+          "source": "География палаты из визуального пилота",
+          "license": "Материал проекта",
+          "optional": true
+        }
+      ],
+      "aliases": [
+        "металлический стол",
+        "металлическому столу",
+        "потрескавшейся белой плиткой"
+      ],
+      "facts": [
+        [
+          "room/wall_surface",
+          "потрескавшаяся белая плитка",
+          "Стены были покрыты потрескавшейся белой плиткой. В углу стояла ржавая инвалидная коляска."
+        ]
+      ]
+    },
+    {
+      "kind": "location",
+      "name": "Коридор третьего этажа",
+      "aliases": [
+        "длинный коридор",
+        "коридор"
+      ],
+      "facts": [
+        [
+          "window_of_room_door",
+          "unspecified",
+          "Он осторожно приоткрыл дверь."
+        ]
+      ]
+    },
+    {
+      "kind": "location",
+      "name": "Операционная",
+      "aliases": [
+        "операционной",
+        "операционную"
+      ]
+    },
+    {
+      "kind": "prop",
+      "name": "Браслет №013",
+      "aliases": [
+        "больничный браслет",
+        "пациент №013"
+      ]
+    },
+    {
+      "kind": "prop",
+      "name": "Стальная дверь палаты",
+      "aliases": [
+        "дверная ручка"
+      ],
+      "facts": [
+        [
+          "window",
+          "unspecified",
+          "Он осторожно приоткрыл дверь."
+        ]
+      ]
+    },
+    {
+      "kind": "prop",
+      "name": "Хирургический скальпель",
+      "aliases": [
+        "старый хирургический скальпель",
+        "скальпель"
+      ]
+    }
+  ]
+}
