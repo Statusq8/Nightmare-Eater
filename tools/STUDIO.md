@@ -33,3 +33,7 @@ JSON содержит `title`, `description`, `tags`, номер `cover_shot` с
 python tools/test_studio.py
 python -m compileall -q tools
 ```
+
+## Профиль Windows и русский пилот
+
+Для установки локальных моделей и подготовки 30–60-секундного русского пилота главы 001 используйте [профиль ноутбука и установщик](WINDOWS.md).

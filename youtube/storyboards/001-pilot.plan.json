@@ -1,0 +1,73 @@
+{
+  "title": "Не открывай дверь | Пожиратель кошмаров",
+  "description": "Кан Джинхёк просыпается в больнице Святой Марии. После полуночи там нельзя отвечать на стук. Пилотная адаптация начала первой главы.",
+  "tags": [
+    "пожиратель кошмаров",
+    "манхва",
+    "хоррор"
+  ],
+  "cover_shot": 5,
+  "shots": [
+    {
+      "source_quote": "В ту ночь я умер впервые.",
+      "narration": "В ту ночь я умер впервые. Всё началось за две минуты до полуночи, когда я поставил телефон на зарядку и закрыл глаза.",
+      "image_prompt": "Cinematic color Korean manhwa, expressive ink contours, cold blue-gray palette, deep shadows, widescreen, clean staging, no text. Kang Jinhyeok, 24-year-old pale slim Korean man, messy black hair, dark gray eyes, dark circles, black zip hoodie over gray tee, dark cargo trousers and dark sneakers. Young man in small modern Korean apartment, bedside phone and dark window; quiet night, close profile.",
+      "characters": [
+        "Кан Джинхёк"
+      ],
+      "camera": "push"
+    },
+    {
+      "source_quote": "Добро пожаловать в Кошмар.",
+      "narration": "Ровно в полночь передо мной вспыхнуло окно системы. «Добро пожаловать в Кошмар». Моя квартира исчезла.",
+      "image_prompt": "Cinematic color Korean manhwa, expressive ink contours, cold blue-gray palette, deep shadows, widescreen, clean staging, no text. Kang Jinhyeok, 24-year-old pale slim Korean man, messy black hair, dark gray eyes, dark circles, black zip hoodie over gray tee, dark cargo trousers and dark sneakers. Sudden cold light over a young man's face, fading apartment background, blank translucent light with no lettering.",
+      "characters": [
+        "Кан Джинхёк"
+      ],
+      "camera": "pull"
+    },
+    {
+      "source_quote": "Пациент №013.",
+      "narration": "Я очнулся на металлическом столе в больнице. На запястье был браслет пациента номер тринадцать.",
+      "image_prompt": "Cinematic color Korean manhwa, expressive ink contours, cold blue-gray palette, deep shadows, widescreen, clean staging, no text. Kang Jinhyeok, 24-year-old pale slim Korean man, messy black hair, dark gray eyes, dark circles, black zip hoodie over gray tee, dark cargo trousers and dark sneakers. Close-up of a pale hand and plain hospital bracelet on steel table, black hoodie sleeve, cold overhead lamp.",
+      "characters": [
+        "Кан Джинхёк"
+      ],
+      "camera": "pan"
+    },
+    {
+      "source_quote": "Покиньте больницу до рассвета.",
+      "narration": "Система дала мне шесть часов, чтобы выбраться до рассвета. О штрафе она сообщила одним словом: смерть.",
+      "image_prompt": "Cinematic color Korean manhwa, expressive ink contours, cold blue-gray palette, deep shadows, widescreen, clean staging, no text. Kang Jinhyeok, 24-year-old pale slim Korean man, messy black hair, dark gray eyes, dark circles, black zip hoodie over gray tee, dark cargo trousers and dark sneakers. Wider abandoned ward, young man sitting upright on a steel examination table, cracked white tile and rusted wheelchair.",
+      "characters": [
+        "Кан Джинхёк"
+      ],
+      "camera": "push"
+    },
+    {
+      "source_quote": "Время принимать лекарство.",
+      "narration": "Кто-то трижды постучал. Женский голос сказал, что пора принимать лекарство. Тут я заметил памятку на двери.",
+      "image_prompt": "Cinematic color Korean manhwa, expressive ink contours, cold blue-gray palette, deep shadows, widescreen, clean staging, no text. Indoor view of a sealed old hospital door, motionless human outline behind frosted glass, pinned blank folded note.",
+      "characters": [],
+      "camera": "pan"
+    },
+    {
+      "source_quote": "Если кто-то постучит в дверь, не отвечайте.",
+      "narration": "После полуночи персонала в больнице нет. Если кто-то постучит — не отвечай. Я отступил и замер.",
+      "image_prompt": "Cinematic color Korean manhwa, expressive ink contours, cold blue-gray palette, deep shadows, widescreen, clean staging, no text. Kang Jinhyeok, 24-year-old pale slim Korean man, messy black hair, dark gray eyes, dark circles, black zip hoodie over gray tee, dark cargo trousers and dark sneakers. Pale young man backing into shadow with a tense hand covering his mouth, door handle in foreground.",
+      "characters": [
+        "Кан Джинхёк"
+      ],
+      "camera": "pull"
+    },
+    {
+      "source_quote": "Его мать умерла семь лет назад.",
+      "narration": "За дверью снова заговорили. «Открой, сынок. Маме холодно». Моя мать умерла семь лет назад.",
+      "image_prompt": "Cinematic color Korean manhwa, expressive ink contours, cold blue-gray palette, deep shadows, widescreen, clean staging, no text. Kang Jinhyeok, 24-year-old pale slim Korean man, messy black hair, dark gray eyes, dark circles, black zip hoodie over gray tee, dark cargo trousers and dark sneakers. Young man's terrified eye with door reflected in it, thin line of light, fully clothed, no gore.",
+      "characters": [
+        "Кан Джинхёк"
+      ],
+      "camera": "push"
+    }
+  ]
+}

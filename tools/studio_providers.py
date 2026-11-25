@@ -64,7 +64,7 @@ class Ollama:
             raise ValueError("Remote Ollama models are disabled for this studio.")
         return json.loads(local_call(self.config["ollama_url"], "/api/generate", {
             "model": model, "system": system, "prompt": prompt, "format": "json",
-            "stream": False, "keep_alive": 0, "options": {"temperature": 0.2, "num_ctx": 8192},
+            "stream": False, "keep_alive": 0, **({"think": False} if model.startswith("qwen3:") else {}), "options": {"temperature": 0.2, "num_ctx": 8192},
             **({"images": images} if images else {}),
         })["response"])
 
@@ -173,10 +173,22 @@ class Piper:
     def __init__(self, config):
         self.model = Path(config["piper_model"])
         self.executable = config["piper_executable"]
+        self.python = config.get("piper_python") or sys.executable
 
     def speech(self, text, target):
-        command = [self.executable] if self.executable else [sys.executable, "-m", "piper"]
-        subprocess.run([*command, "-m", str(self.model), "-f", str(target), "--", text],
+        if self.executable:
+            subprocess.run([self.executable, "-m", str(self.model), "-f", str(target), "--", text],
+                           check=True, timeout=180)
+            return
+        # The Windows wheel's espeak bridge can fail on an absolute non-ASCII data path.
+        program = (
+            "import os, sys, wave, piper; from pathlib import Path; "
+            "os.chdir(Path(piper.__file__).parent); "
+            "voice = piper.PiperVoice.load(sys.argv[1], espeak_data_dir='espeak-ng-data'); "
+            "output = wave.open(sys.argv[2], 'wb'); "
+            "voice.synthesize_wav(sys.argv[3], output); output.close()"
+        )
+        subprocess.run([self.python, "-X", "utf8", "-c", program, str(self.model), str(target), text],
                        check=True, timeout=180)
 
 
@@ -184,9 +196,10 @@ class Prepared:
     """Use reviewed local files as a drop-in adapter for any of the three stages."""
     def __init__(self, config):
         self.folder = Path(config["prepared_dir"])
+        self.plan_name = config.get("prepared_plan", "plan.json")
 
     def plan(self, chapter, lore, canon, quote, limit, language):
-        return json.loads((self.folder / "plan.json").read_text(encoding="utf-8-sig"))
+        return json.loads((self.folder / self.plan_name).read_text(encoding="utf-8-sig"))
 
     def image(self, prompt, seed, reference, target, job_file):
         shutil.copyfile(self.folder / target.name, target)

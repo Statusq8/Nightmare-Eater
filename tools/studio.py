@@ -64,11 +64,11 @@ def settings():
         text_provider="ollama", image_provider="comfyui", tts_provider="piper",
         ollama_url="http://127.0.0.1:11434", ollama_model="", vision_model="",
         comfy_url="http://127.0.0.1:8188", comfy_workflow="", comfy_output_node="",
-        comfy_trusted_nodes="", piper_executable="", piper_model="", prepared_dir="",
-        reference="assets/characters/jinhyeok-approved.png", language="English",
+        comfy_trusted_nodes="", piper_executable="", piper_python="", piper_model="", prepared_dir="",
+        reference="assets/characters/jinhyeok-approved.png", language="Russian",
     )
     config = {name: overrides.get("STUDIO_" + name.upper(), value) for name, value in defaults.items()}
-    for key in ("reference", "comfy_workflow", "piper_model", "prepared_dir"):
+    for key in ("reference", "comfy_workflow", "piper_model", "prepared_dir", "piper_python"):
         if config[key]:
             config[key] = str((ROOT / config[key]).resolve())
     return config
@@ -93,7 +93,9 @@ def blockers(config):
         executable = config["piper_executable"]
         if executable and not shutil.which(executable):
             missing.append("Missing Piper executable.")
-        elif not executable:
+        elif config["piper_python"] and not Path(config["piper_python"]).is_file():
+            missing.append("Missing isolated Piper Python.")
+        elif not executable and not config["piper_python"]:
             from importlib.util import find_spec
 
             if find_spec("piper") is None:
@@ -320,6 +322,7 @@ def visual_review(ollama, config, reference, shot, image, canon, target):
 def execute(folder, config, options, source, identity):
     chapter, lore, canon = source
     synthetic = options.synthetic
+    pilot = getattr(options, "pilot", False)
     fixture = Synthetic()
     text = fixture if synthetic else TEXT_PROVIDERS[config["text_provider"]](config)
     image_provider = fixture if synthetic else IMAGE_PROVIDERS[config["image_provider"]](config)
@@ -332,7 +335,7 @@ def execute(folder, config, options, source, identity):
 
         def plan_out(path):
             plan = text.plan(chapter, lore, canon, quote, options.max_shots, config["language"])
-            validate_plan(plan, chapter, options.max_shots, full=not synthetic and options.max_shots > 3)
+            validate_plan(plan, chapter, options.max_shots, full=not synthetic and not pilot and options.max_shots > 3)
             write(path, plan)
 
         run.stage("plan", identity, ["plan.json"], plan_out, attempts=2)
@@ -365,6 +368,10 @@ def execute(folder, config, options, source, identity):
         run.stage("timeline", materials, ["narration.wav", "captions.srt", "storyboard.json"],
                   lambda *paths: assemble(folder, rows, *paths))
         timeline = [file_hash(folder / name) for name in ("narration.wav", "captions.srt", "storyboard.json")]
+        if pilot:
+            seconds = sum(shot["duration"] for shot in json.loads(read(folder / "storyboard.json"))["shots"])
+            if not 30 <= seconds <= 60:
+                raise ValueError(f"Pilot narration runs {seconds:.1f}s. Required range: 30–60s.")
         run.stage("render", [materials, timeline], ["episode.mp4"],
                   lambda path: render(folder / "storyboard.json", path))
         cover = rows[plan["cover_shot"] - 1][1]
@@ -384,10 +391,19 @@ def main():
     parser.add_argument("--run", action="store_true", help="Execute; default is dry-run")
     parser.add_argument("--synthetic", action="store_true", help="Use synthetic test fixtures")
     parser.add_argument("--max-shots", type=int, default=24)
+    parser.add_argument("--pilot", action="store_true", help="Use the prepared Russian opening of chapter 001")
     args = parser.parse_args()
     if not re.fullmatch(r"[0-9]{3}", args.chapter) or not 1 <= args.max_shots <= 60:
         parser.error("Use a three-digit chapter and 1–60 shots.")
     config = settings()
+    if args.pilot:
+        if args.chapter != "001" or args.synthetic:
+            parser.error("--pilot only supports the real chapter 001.")
+        args.max_shots = 7
+        config["text_provider"] = "prepared"
+        config["prepared_dir"] = str(ROOT / "youtube" / "storyboards")
+        config["prepared_plan"] = "001-pilot.plan.json"
+        config["language"] = "Russian"
     missing = [] if args.synthetic else blockers(config)
     paths = [ROOT / name for name in (f"chapters/{args.chapter}.md",
                                      "lore/story-bible.md", "lore/character-design.md")]
@@ -415,16 +431,17 @@ def main():
                 local_files["piper_executable"] = Path(shutil.which(config["piper_executable"]))
         if any(config[key] == "prepared" for key in ("text_provider", "image_provider", "tts_provider")):
             for path in Path(config["prepared_dir"]).iterdir():
-                if re.fullmatch(r"plan\.json|panel-\d{3}\.png|voice-\d{3}\.wav", path.name) and path.is_file():
+                if (path.name == config.get("prepared_plan", "plan.json") or
+                        re.fullmatch(r"panel-\d{3}\.png|voice-\d{3}\.wav", path.name)) and path.is_file():
                     local_files["prepared/" + path.name] = path
-    identity = {"version": VERSION, "chapter": args.chapter, "synthetic": args.synthetic,
+    identity = {"version": VERSION, "chapter": args.chapter, "synthetic": args.synthetic, "pilot": args.pilot,
                 "max_shots": args.max_shots, "engine": {name: file_hash(ROOT / "tools" / name) for name in
                     ("studio.py", "studio_providers.py", "render.py")}, "sources": [fingerprint(item) for item in source],
                 "files": {key: file_hash(path) for key, path in local_files.items()},
                 "providers": {key: config[key] for key in ("text_provider", "image_provider", "tts_provider",
                               "ollama_model", "vision_model", "language", "comfy_output_node",
                               "comfy_trusted_nodes", "ollama_url", "comfy_url")} if not args.synthetic else {}}
-    mode = "synthetic" if args.synthetic else args.chapter
+    mode = "synthetic" if args.synthetic else (args.chapter + "-pilot" if args.pilot else args.chapter)
     folder = ROOT / "output" / "studio" / f"{mode}-{fingerprint(identity)[:16]}"
     try:
         execute(folder, config, args, source, identity)

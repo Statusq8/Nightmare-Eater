@@ -27,3 +27,6 @@ output/*
 *.webm
 youtube/voiceover/*
 !youtube/voiceover/.gitkeep
+
+# Portable studio runtimes, model weights and download cache
+.studio-local/
