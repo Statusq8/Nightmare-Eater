@@ -215,6 +215,8 @@ def backup(home, target):
 
 def generate_references(home, chapter, limit, entity_name, launch=False):
     from setup_windows import run_comfy
+    from art_style_lock import require_backend
+    require_backend("local-comfyui")
 
     with exclusive(home/"worker"):
         with ledger(home/"world.sqlite") as db:

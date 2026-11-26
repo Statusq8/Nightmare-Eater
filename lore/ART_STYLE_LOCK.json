@@ -1,0 +1,511 @@
+{
+  "id": "ART_STYLE_LOCK",
+  "revision": 1,
+  "approved_baseline": "001-visual-30",
+  "backend": "managed-imagegen",
+  "settings": {
+    "checkpoint": {
+      "value": null,
+      "status": "not exposed by managed ImageGen"
+    },
+    "LoRA": {
+      "value": null,
+      "status": "not exposed by managed ImageGen"
+    },
+    "VAE": {
+      "value": null,
+      "status": "not exposed by managed ImageGen"
+    },
+    "sampler": {
+      "value": null,
+      "status": "not exposed by managed ImageGen"
+    },
+    "scheduler": {
+      "value": null,
+      "status": "not exposed by managed ImageGen"
+    },
+    "CFG": {
+      "value": null,
+      "status": "not exposed by managed ImageGen"
+    },
+    "seed": {
+      "value": null,
+      "status": "not exposed by managed ImageGen"
+    }
+  },
+  "style": "Adult Korean horror ink manhwa. Angular realistic anatomy, deep graphite shadows, cold slate and blue-gray light, scarce muted crimson. Preserve the approved hair, face, costume and normal charcoal-gray eyes.",
+  "policy": {
+    "backend_substitution": false,
+    "style_changes_require_owner_authorization": true,
+    "fallback": "sha256-verified approved still for the same shot; otherwise stop",
+    "geometry": "separate layout and camera inputs only"
+  },
+  "storyboard_sha256": "57e8af1ed8c99886c4e488f27c5c31b821c563767f68651f87dfb4b093186450",
+  "references": {
+    "character-sheet.jpg": "ffc3a1f70bd1666779636585f22cd2f12a3843b938cdab910ddb09c1c39833c1",
+    "ward-context.png": "625a57cb8aa72c8df581ae0f4727ab9fb92b740337d90448588270045871e79e",
+    "door-context.png": "31eddb06b34097ceb8c5c4e35a280ec38eb40383cac7e50be2d8c12099b9f99d",
+    "apartment-context.png": "ad441fee49bb9b0e67f0b32f4cf2d611aa3a27a07ae7ab7062fb78ddb34925a4",
+    "awakening-draft-1.png": "124fc55001f81e8380c9b8f5e5469fe8f021a6ebacb86ba35796eb7c4e0792ff",
+    "awakening-draft-2.png": "46fb09742b454bacd5ecf13a3998095c04dc13a884109b907002c938759177b5"
+  },
+  "baseline": [
+    {
+      "mean_luma": 24.75,
+      "contrast": 57.0,
+      "cool_bias": 11.83,
+      "scores": {
+        "face": 0.653,
+        "body": 0.613,
+        "eye": 0.57,
+        "scene": 0.626,
+        "bracelet": 0.292
+      },
+      "reference_family": "body",
+      "threshold": 0.41,
+      "reason": [],
+      "shot": 1,
+      "take": "shot-01-take-1.png",
+      "sha256": "ad441fee49bb9b0e67f0b32f4cf2d611aa3a27a07ae7ab7062fb78ddb34925a4",
+      "file": "approved/shot-01.png"
+    },
+    {
+      "mean_luma": 37.54,
+      "contrast": 101.0,
+      "cool_bias": 18.67,
+      "scores": {
+        "face": 0.445,
+        "body": 0.554,
+        "eye": 0.599,
+        "scene": 0.495,
+        "bracelet": 0.314
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 2,
+      "take": "shot-02-take-1.png",
+      "sha256": "0dd92293106b2ea76367eb7a345c30b47d01fc04eab459716a8d0defe51fec50",
+      "file": "approved/shot-02.png"
+    },
+    {
+      "mean_luma": 28.83,
+      "contrast": 90.0,
+      "cool_bias": 7.58,
+      "scores": {
+        "face": 0.707,
+        "body": 0.625,
+        "eye": 0.685,
+        "scene": 0.486,
+        "bracelet": 0.321
+      },
+      "reference_family": "face",
+      "threshold": 0.47,
+      "reason": [],
+      "shot": 3,
+      "take": "shot-03-take-1.png",
+      "sha256": "0567181dbfc874ac53ab5dc519f168353b3ba23c2beb0464034f85f928ad7ebd",
+      "file": "approved/shot-03.png"
+    },
+    {
+      "mean_luma": 34.61,
+      "contrast": 100.0,
+      "cool_bias": 11.74,
+      "scores": {
+        "face": 0.45,
+        "body": 0.575,
+        "eye": 0.578,
+        "scene": 0.477,
+        "bracelet": 0.33
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 4,
+      "take": "shot-04-take-1.png",
+      "sha256": "2397df57484cdeaca119e083a2ecdd12bb5d61781cd20e69626a7b41a08f747b",
+      "file": "approved/shot-04.png"
+    },
+    {
+      "mean_luma": 28.51,
+      "contrast": 78.0,
+      "cool_bias": 10.41,
+      "scores": {
+        "face": 0.744,
+        "body": 0.685,
+        "eye": 0.625,
+        "scene": 0.585,
+        "bracelet": 0.302
+      },
+      "reference_family": "face",
+      "threshold": 0.47,
+      "reason": [],
+      "shot": 5,
+      "take": "shot-05-take-1.png",
+      "sha256": "7ec34f3c22bf786d1e71b6fa67301df34caf4652c5197514c7c3cb584dd683fa",
+      "file": "approved/shot-05.png"
+    },
+    {
+      "mean_luma": 24.08,
+      "contrast": 52.0,
+      "cool_bias": 14.47,
+      "scores": {
+        "face": 0.44,
+        "body": 0.514,
+        "eye": 0.553,
+        "scene": 0.532,
+        "bracelet": 0.291
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 6,
+      "take": "shot-06-take-1.png",
+      "sha256": "9e08056a9fd49aa4658e4321b37306a8e652b1d8aa2352b69a76c6a08c87a8a6",
+      "file": "approved/shot-06.png"
+    },
+    {
+      "mean_luma": 41.84,
+      "contrast": 106.0,
+      "cool_bias": 3.75,
+      "scores": {
+        "face": 0.654,
+        "body": 0.628,
+        "eye": 0.751,
+        "scene": 0.501,
+        "bracelet": 0.324
+      },
+      "reference_family": "eye",
+      "threshold": 0.47,
+      "reason": [],
+      "shot": 7,
+      "take": "shot-07-take-1.png",
+      "sha256": "90e17f4cbeaaba467940f92a037becd2de787c330c157555e35f63d4c17fdcf1",
+      "file": "approved/shot-07.png"
+    },
+    {
+      "mean_luma": 34.26,
+      "contrast": 85.0,
+      "cool_bias": 9.34,
+      "scores": {
+        "face": 0.768,
+        "body": 0.699,
+        "eye": 0.642,
+        "scene": 0.677,
+        "bracelet": 0.31
+      },
+      "reference_family": "body",
+      "threshold": 0.41,
+      "reason": [],
+      "shot": 8,
+      "take": "shot-08-take-3.png",
+      "sha256": "af1adadb7deb24f85be3b77ea9e4c799711698734d26076486633c4e397a1707",
+      "file": "approved/shot-08.png"
+    },
+    {
+      "mean_luma": 56.77,
+      "contrast": 108.0,
+      "cool_bias": 12.14,
+      "scores": {
+        "face": 0.511,
+        "body": 0.629,
+        "eye": 0.627,
+        "scene": 0.482,
+        "bracelet": 0.328
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 9,
+      "take": "shot-09-take-1.png",
+      "sha256": "415cd5aa294f9bf4618ca54ebbb6bef609b2da78434765454c6d0c584930e67c",
+      "file": "approved/shot-09.png"
+    },
+    {
+      "mean_luma": 34.78,
+      "contrast": 69.0,
+      "cool_bias": 14.84,
+      "scores": {
+        "face": 0.74,
+        "body": 0.659,
+        "eye": 0.605,
+        "scene": 0.656,
+        "bracelet": 0.372
+      },
+      "reference_family": "body",
+      "threshold": 0.41,
+      "reason": [],
+      "shot": 10,
+      "take": "shot-10-take-1.png",
+      "sha256": "625a57cb8aa72c8df581ae0f4727ab9fb92b740337d90448588270045871e79e",
+      "file": "approved/shot-10.png"
+    },
+    {
+      "mean_luma": 34.58,
+      "contrast": 76.0,
+      "cool_bias": 4.33,
+      "scores": {
+        "face": 0.395,
+        "body": 0.507,
+        "eye": 0.573,
+        "scene": 0.622,
+        "bracelet": 0.401
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 11,
+      "take": "shot-11-take-1.png",
+      "sha256": "c50b26bcd95dfa703eb5f720e1d780bfc02e0f3b9fae838965136de6a19e06bc",
+      "file": "approved/shot-11.png"
+    },
+    {
+      "mean_luma": 34.39,
+      "contrast": 77.0,
+      "cool_bias": 17.64,
+      "scores": {
+        "face": 0.453,
+        "body": 0.497,
+        "eye": 0.536,
+        "scene": 0.656,
+        "bracelet": 0.394
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 12,
+      "take": "shot-12-take-1.png",
+      "sha256": "bb56901c3dde4440192b69bd24616294c495a21994fa05831cc7a07631933386",
+      "file": "approved/shot-12.png"
+    },
+    {
+      "mean_luma": 48.57,
+      "contrast": 101.0,
+      "cool_bias": 16.31,
+      "scores": {
+        "face": 0.486,
+        "body": 0.61,
+        "eye": 0.614,
+        "scene": 0.483,
+        "bracelet": 0.523
+      },
+      "reference_family": "bracelet",
+      "threshold": 0.39,
+      "reason": [],
+      "shot": 13,
+      "take": "shot-13-take-1.png",
+      "sha256": "e18b44adc0b00741efd42dd71ad5e113ba6d4eaf6f7ea1913f2dc4ab416926b6",
+      "file": "approved/shot-13.png"
+    },
+    {
+      "mean_luma": 36.05,
+      "contrast": 81.0,
+      "cool_bias": 13.65,
+      "scores": {
+        "face": 0.473,
+        "body": 0.615,
+        "eye": 0.631,
+        "scene": 0.572,
+        "bracelet": 0.418
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 14,
+      "take": "shot-14-take-1.png",
+      "sha256": "74c5bfd8243e74603a5d308a77ff8e8230c11157ed7d7a51db15cf15fd56bc26",
+      "file": "approved/shot-14.png"
+    },
+    {
+      "mean_luma": 19.42,
+      "contrast": 72.0,
+      "cool_bias": 11.06,
+      "scores": {
+        "face": 0.72,
+        "body": 0.636,
+        "eye": 0.645,
+        "scene": 0.714,
+        "bracelet": 0.332
+      },
+      "reference_family": "body",
+      "threshold": 0.41,
+      "reason": [],
+      "shot": 15,
+      "take": "shot-15-take-1.png",
+      "sha256": "72fe06396b70f622c59a8b690cbcea5ba5c7b45e0e6be380e345c5794d478ae3",
+      "file": "approved/shot-15.png"
+    },
+    {
+      "mean_luma": 39.89,
+      "contrast": 102.0,
+      "cool_bias": 9.64,
+      "scores": {
+        "face": 0.754,
+        "body": 0.676,
+        "eye": 0.685,
+        "scene": 0.532,
+        "bracelet": 0.46
+      },
+      "reference_family": "face",
+      "threshold": 0.47,
+      "reason": [],
+      "shot": 16,
+      "take": "shot-16-take-1.png",
+      "sha256": "290ba7a25fd410ec9dc485df464c30e34d46bf41726e219bfd5796a8673a9fc4",
+      "file": "approved/shot-16.png"
+    },
+    {
+      "mean_luma": 52.42,
+      "contrast": 118.0,
+      "cool_bias": 7.74,
+      "scores": {
+        "face": 0.497,
+        "body": 0.62,
+        "eye": 0.641,
+        "scene": 0.485,
+        "bracelet": 0.337
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 17,
+      "take": "shot-17-take-1.png",
+      "sha256": "a91d0361fab6c99fda6a7ec5a3eb9c27428ce5526aeb6984619a02edcd4c17c7",
+      "file": "approved/shot-17.png"
+    },
+    {
+      "mean_luma": 37.16,
+      "contrast": 104.0,
+      "cool_bias": 14.58,
+      "scores": {
+        "face": 0.533,
+        "body": 0.662,
+        "eye": 0.665,
+        "scene": 0.521,
+        "bracelet": 0.393
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 18,
+      "take": "shot-18-take-1.png",
+      "sha256": "7aa360a05ae7797bdf6077291bdbd6182388720efa47dd7134d5048d1d07405d",
+      "file": "approved/shot-18.png"
+    },
+    {
+      "mean_luma": 27.13,
+      "contrast": 68.0,
+      "cool_bias": 11.92,
+      "scores": {
+        "face": 0.479,
+        "body": 0.579,
+        "eye": 0.561,
+        "scene": 0.807,
+        "bracelet": 0.359
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 19,
+      "take": "shot-19-take-1.png",
+      "sha256": "477dda2f363b983898545262960272022a1e968f332eb869a0910df25fb8e9fd",
+      "file": "approved/shot-19.png"
+    },
+    {
+      "mean_luma": 37.03,
+      "contrast": 56.0,
+      "cool_bias": 16.4,
+      "scores": {
+        "face": 0.417,
+        "body": 0.491,
+        "eye": 0.524,
+        "scene": 0.657,
+        "bracelet": 0.373
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 20,
+      "take": "shot-20-take-1.png",
+      "sha256": "855f11bf9459bca84bca0fba182cf54fa81722a508658b72b6c5ff2b63e29934",
+      "file": "approved/shot-20.png"
+    },
+    {
+      "mean_luma": 34.52,
+      "contrast": 70.0,
+      "cool_bias": 14.86,
+      "scores": {
+        "face": 0.759,
+        "body": 0.7,
+        "eye": 0.629,
+        "scene": 0.681,
+        "bracelet": 0.391
+      },
+      "reference_family": "face",
+      "threshold": 0.47,
+      "reason": [],
+      "shot": 21,
+      "take": "shot-21-take-1.png",
+      "sha256": "0eda2bacbc1ecbf38ad4c4dbea73dc139cd9dc2e7a04ced35cd06f40b647b296",
+      "file": "approved/shot-21.png"
+    },
+    {
+      "mean_luma": 31.32,
+      "contrast": 56.0,
+      "cool_bias": 13.26,
+      "scores": {
+        "face": 0.402,
+        "body": 0.552,
+        "eye": 0.579,
+        "scene": 0.547,
+        "bracelet": 0.396
+      },
+      "reference_family": "scene",
+      "threshold": 0.29,
+      "reason": [],
+      "shot": 22,
+      "take": "shot-22-take-1.png",
+      "sha256": "31eddb06b34097ceb8c5c4e35a280ec38eb40383cac7e50be2d8c12099b9f99d",
+      "file": "approved/shot-22.png"
+    }
+  ],
+  "prompt_provenance": "Recovered from generation calls in this conversation. Shot-specific actions are in the storyboard. Backend parameters are not guessed.",
+  "prompts": {
+    "shot_01": "Create ONE original cinematic landscape 16:9 illustration for shot 01 of the user's own horror manhwa Nightmare Eater. The attached image is the STRICT character and art-direction reference, not the composition. Match Kang Jinhyeok exactly: extremely slender Korean man age 24, identical long slender angular face, messy layered black fringe and dark charcoal gray eyes with circles, pale skin, black zip hoodie over gray shirt, dark cargo trousers. {action} Immersive painted cel shadows and fine ink lines, mature refined realism, dark graphite and blue-gray, very rare red highlights. Full bleed, no text, no grid, no lettering. Composition predominantly shows the room and has readable action, restrained cinematic lighting. Return only the completed illustration.",
+    "standard": "Use case illustration-story. Create a SINGLE original full-bleed horizontal 16:9 film frame for the user's own Korean horror manhwa Nightmare Eater. Image 1 is strict character model sheet and rendering reference, any subsequent image is scene continuity only. Never reproduce a reference composition. Story action and composition: {action} In character shots exactly retain the reference: slender 24-year-old Korean man, same long angular jaw and nose, black jagged fringe, dark gray eyes, dark under-eye shadows, pale neutral skin, dark washed black zip-front hoodie over matte gray crew neck and black cargo clothes. No transformation eyes or streak marks. Apply character traits only where visible in this exact angle; if object-only no faces, bodies, or portraits. Rich hand-rendered black ink outlines with subtle painterly texture, deep charcoal graphite shadows, cold blue slate indirect light, scarce muted crimson. No blood, additional people, photorealistic rendering, panels, grids, borders, typography, timecode, lettering, or margins, except exactly 013 as a tiny printed number only if explicitly requested on the bracelet. {extra} Keep this composition a single distinct new shot.",
+    "extras": {
+      "10": "The locked ward establishes geography. Metal slab at center, the lone wheelchair left, a fully closed painted blue steel door to the right. No glass on the door.",
+      "13": "Print exactly 013 on the wristband at a readable size, with the worn paper wrapping realistically. No other legible text.",
+      "15": "There is a small suspended dark translucent crimson rectangle at upper right with thin red graphical lines and warning triangle only. It is not typography.",
+      "22": "The lever should point left, a matte worn steel lever, camera from inside the ward."
+    },
+    "shot_08_take_2": "One fully new cinematic 16:9 illustration, shot 08 from the user's original Korean horror manhwa. Image 1 is the exact facial, costume and ink rendering model sheet. Image 2 establishes the locked tiled ward geography and its ONLY single bare incandescent bulb on a wire. Image 3 establishes the startled physical sit-up gesture and camera height only. Draw Kang Jinhyeok exactly from Image 1, normal charcoal gray eyes, loose gray T-shirt, open black zip hoodie and dark cargos. A low side-three-quarter camera from the edge of the steel slab, he has just bolted upright and catches himself with an anatomically correct palm flat on steel. He looks into the ward, not at viewer. Foreground cool slab highlights, cracked dirty tile behind, one dim naked bulb or ceiling entirely out of frame. Zero surgical spotlights, no operating lamp, no other people, no text, no grid, full bleed. Hard graphite shadows and blue-black ink with a faint muted crimson edge. Keep the entire original pose clearly readable, preserve character face and body from image 1.",
+    "shot_08_take_3": "Edit the supplied single frame of the user's original graphic novel for continuity. Preserve faithfully the exact landscape composition, point of view, pose, hand geometry, expression and hairstyle, cold dark ink palette, closed blue steel door, and the only small bulb in the background. Make one surgical cleanup everywhere in the frame: replace all red/brown spatters, scratches and stains on the man's cheek, neck, forearm, fingers, gray shirt, table and wall with clean intact skin, clean gray fabric and weathered neutral materials. He has just awakened and is physically unharmed. Skin has only normal shadows and no marks, clothing is dry and clean. The tiny reddish reflection on the far floor/window is allowed. No new elements, no graphic lettering. Output one high-quality wide seamless illustration."
+  },
+  "reference_usage": {
+    "default": [
+      "character-sheet.jpg"
+    ],
+    "shots_02_to_06": [
+      "character-sheet.jpg",
+      "apartment-context.png"
+    ],
+    "shots_11_to_18": [
+      "character-sheet.jpg",
+      "ward-context.png"
+    ],
+    "shots_20_21": [
+      "character-sheet.jpg",
+      "ward-context.png",
+      "door-context.png"
+    ],
+    "08_take_2": [
+      "character-sheet.jpg",
+      "ward-context.png",
+      "awakening-draft-1.png"
+    ],
+    "08_take_3": [
+      "awakening-draft-2.png"
+    ]
+  }
+}

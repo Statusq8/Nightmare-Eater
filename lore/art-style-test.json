@@ -1,0 +1,39 @@
+{
+  "style": {
+    "profile": "ART_STYLE_LOCK.json",
+    "provider": "managed-imagegen",
+    "reference": "output/visual-pilot-30/approved/shot-08.png",
+    "comfy_model": "blocked_pending_approved_equivalent"
+  },
+  "identity": {
+    "method": "IP-Adapter",
+    "reference": "assets/characters/jinhyeok-concept.jpg",
+    "scope": "character only"
+  },
+  "geometry": {
+    "method": "ControlNet Depth/Lineart",
+    "reference": "lore/studio2-ward-layout.json",
+    "status": "paused"
+  },
+  "pose": {
+    "method": "OpenPose",
+    "scope": "skeletal pose only"
+  },
+  "lighting": {
+    "palette": "cold slate and graphite",
+    "practical": "single dim warm filament",
+    "atmosphere": "wet tile reflections, deep shadows"
+  },
+  "execution": {
+    "managed_imagegen": "reference inputs only; does not expose IP-Adapter or ControlNet",
+    "comfyui": "blocked by style lock",
+    "publish": false
+  },
+  "angles": [
+    "Wide establishing shot from just inside the near left corner, eye level, include seated hero at left and far door and bed to right",
+    "Frontal medium close-up from the foot of the cot, facing back toward the hero against the left tiled corner.",
+    "Over his left shoulder from behind, stare down depth of the room toward barred door; keep bed visibly right of the door",
+    "High oblique angle from the left wall, show seated posture, tiled wet floor leading toward identical closed barred door and bed",
+    "Tight eye-level profile of his face turning toward an offscreen sound at the door; small out-of-focus filament and black tiled wall establish same room"
+  ]
+}
