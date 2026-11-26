@@ -245,6 +245,8 @@ def run_ollama():
 
 
 def run_comfy():
+    from art_style_lock import require_backend
+    require_backend("local-comfyui")
     return server("comfy", COMFY_URL, "/system_stats",
                   [COMFY_PY, COMFY / "main.py", "--listen", "127.0.0.1", "--port", "8189",
                    "--lowvram", "--offline", "--disable-dynamic-vram", "--preview-method", "none"], COMFY)

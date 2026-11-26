@@ -321,6 +321,9 @@ def visual_review(ollama, config, reference, shot, image, canon, target):
 
 def execute(folder, config, options, source, identity):
     chapter, lore, canon = source
+    if not options.synthetic:
+        from art_style_lock import require_backend
+        require_backend(config["image_provider"])
     synthetic = options.synthetic
     pilot = getattr(options, "pilot", False)
     fixture = Synthetic()

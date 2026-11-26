@@ -1,0 +1,228 @@
+{
+  "chapter": "001",
+  "fps": 30,
+  "frames": 900,
+  "reference_sha256": "ffc3a1f70bd1666779636585f22cd2f12a3843b938cdab910ddb09c1c39833c1",
+  "shots": [
+    {
+      "id": 1,
+      "start": 0,
+      "end": 55,
+      "frames": 55,
+      "beat": "Общий план. Из-за дверного косяка видна тесная съёмная квартира и лежащий поперёк кадра Джинхёк. Экран телефона освещает только кисть и щёку.",
+      "camera": "push",
+      "ref": "side",
+      "action": "Wide night interior seen from a dark doorway, small Seoul apartment, young man reclines on a narrow bed looking at his phone near window, dark zip hoodie over grey T-shirt, figure on right third, blue rainy glass in background."
+    },
+    {
+      "id": 2,
+      "start": 55,
+      "end": 90,
+      "frames": 35,
+      "beat": "Сверхкрупно. Большой палец останавливает прокрутку. Холодный отблеск по краю экрана.",
+      "camera": "static",
+      "ref": "prop",
+      "action": "Extreme macro of a pale thumb stopping a scroll on a black glass smartphone over rumpled midnight bedding, screen shows indistinct blue abstract light."
+    },
+    {
+      "id": 3,
+      "start": 90,
+      "end": 134,
+      "frames": 44,
+      "beat": "В профиль. Тяжёлый взгляд отрывается от экрана, плечи опускаются.",
+      "camera": "pan",
+      "ref": "side",
+      "action": "Strict profile close-up of a tired young Korean man lying sideways on a dark pillow; eyes drift away from the phone, strands of tousled black hair and under-eye shadows lit cool blue."
+    },
+    {
+      "id": 4,
+      "start": 134,
+      "end": 167,
+      "frames": 33,
+      "beat": "Предметный план. Кабель входит в телефон на краю тумбочки.",
+      "camera": "static",
+      "ref": "prop",
+      "action": "A pale male hand plugs a single USB-C charging cable into the side of a dark flat smartphone resting on a charcoal bedside table, extreme close-up at table level."
+    },
+    {
+      "id": 5,
+      "start": 167,
+      "end": 211,
+      "frames": 44,
+      "beat": "Изголовье сверху. Джинхёк закрывает глаза, экран гаснет.",
+      "camera": "pull",
+      "ref": "calm",
+      "action": "High overhead medium close-up, same slim young Korean man on his back, eyes fully shut, messy black fringe, face on charcoal pillow, black zip hoodie and gray tee; phone on distant bedside table."
+    },
+    {
+      "id": 6,
+      "start": 211,
+      "end": 244,
+      "frames": 33,
+      "beat": "Темнота у кровати. Красный свет собирается в тонкий прямоугольник.",
+      "camera": "push",
+      "ref": "prop",
+      "action": "One empty thin translucent red rectangle materializes in deep blue-black darkness above a bed, camera at pillow height, restrained halo, no people, no letters."
+    },
+    {
+      "id": 7,
+      "start": 244,
+      "end": 282,
+      "frames": 38,
+      "beat": "У виска. Глаз раскрывается, в зрачке появляется красная дорожка.",
+      "camera": "static",
+      "ref": "eye",
+      "action": "Extreme macro of one startled normal gray human eye underneath messy black bangs, reflected red rectangle in cornea only, not glowing red iris, mature Korean manhwa ink."
+    },
+    {
+      "id": 8,
+      "start": 282,
+      "end": 328,
+      "frames": 46,
+      "beat": "Низкий боковой. Джинхёк рывком садится и упирается ладонью в поверхность.",
+      "camera": "pull",
+      "ref": "side",
+      "action": "Side low-angle medium action shot, slim young Korean man in open black zip hoodie and light gray T-shirt catches himself with one bare palm as he jerks upright on a steel examination slab; no other person."
+    },
+    {
+      "id": 9,
+      "start": 328,
+      "end": 364,
+      "frames": 36,
+      "beat": "Предметный стык. Пальцы сминают ткань, но под ней холодный металл.",
+      "camera": "pan",
+      "ref": "prop",
+      "action": "Tight tactile insert, pale tense knuckles and dark hoodie cuff grip a thin wrinkled cloth lying across a stainless steel slab, one side of gleaming metal visible blue-gray."
+    },
+    {
+      "id": 10,
+      "start": 364,
+      "end": 414,
+      "frames": 50,
+      "beat": "Общий низкий план. Впервые видна палата целиком. Джинхёк сидит на столе.",
+      "camera": "pull",
+      "ref": "back",
+      "action": "Very wide low camera inside abandoned hospital room, one slim young Korean man seated on central steel examination slab, black unzipped hoodie, cracked white tiles, one bare bulb overhead, wheelchair in distant corner."
+    },
+    {
+      "id": 11,
+      "start": 414,
+      "end": 446,
+      "frames": 32,
+      "beat": "Вверх. Одинокая лампочка качается над пустотой.",
+      "camera": "static",
+      "ref": "ward",
+      "action": "Low-angle extreme close view of one small naked incandescent light bulb hanging downward from a black wire under cracked dark hospital ceiling, no shade, no lantern, no people."
+    },
+    {
+      "id": 12,
+      "start": 446,
+      "end": 485,
+      "frames": 39,
+      "beat": "С уровня пола. Колесо ржавой коляски и мокрый кафель под ним.",
+      "camera": "pan",
+      "ref": "corridor",
+      "action": "Ground level side insert of a rusted wheelchair wheel and one footrest reflected in a small puddle across old cracked blue-gray hospital tiles, no people."
+    },
+    {
+      "id": 13,
+      "start": 485,
+      "end": 533,
+      "frames": 48,
+      "beat": "Крупно. Джинхёк поворачивает запястье, браслет выходит на свет.",
+      "camera": "push",
+      "ref": "bracelet",
+      "action": "Extreme close-up of one pale male wrist rotating toward a cold light, white hospital wristband around wrist, mostly blank front label, black hoodie cuff. No other subject."
+    },
+    {
+      "id": 14,
+      "start": 533,
+      "end": 568,
+      "frames": 35,
+      "beat": "Предметный нижний план. Тёмная кеда касается кафеля.",
+      "camera": "static",
+      "ref": "prop",
+      "action": "Extreme ground level action insert of one dark charcoal low-top sneaker with black cargo-pant cuff making contact with wet gray hospital floor, slight droplets, no face."
+    },
+    {
+      "id": 15,
+      "start": 568,
+      "end": 613,
+      "frames": 45,
+      "beat": "Через плечо. Перед Джинхёком возникает красная рамка Системы.",
+      "camera": "push",
+      "ref": "back",
+      "action": "Over the shoulder of lone young Korean man in a black hoodie inside a tiled hospital ward, back of his messy black head on far left, empty darker space on right for a small translucent red interface, no text."
+    },
+    {
+      "id": 16,
+      "start": 613,
+      "end": 650,
+      "frames": 37,
+      "beat": "Крупный профиль. Он переводит взгляд с окна Системы на собственную руку.",
+      "camera": "static",
+      "ref": "fear",
+      "action": "Tight three-quarter portrait of the same slim 24-year-old Korean man, black messy fringe, sunken charcoal-gray eyes and pale skin, gaze cuts downward toward his wrist, controlled fear, black zip hoodie over gray tee."
+    },
+    {
+      "id": 17,
+      "start": 650,
+      "end": 685,
+      "frames": 35,
+      "beat": "Макро. Джинхёк щиплет кожу на предплечье.",
+      "camera": "static",
+      "ref": "prop",
+      "action": "Macro insert of one pale hand pinching a small fold of intact skin on a bare forearm, thumb and index finger in contact, black hoodie sleeve pushed back, blue-gray lighting, no wounds."
+    },
+    {
+      "id": 18,
+      "start": 685,
+      "end": 721,
+      "frames": 36,
+      "beat": "Боковой низкий план. Открытая ладонь резко ударяет по стальному столу.",
+      "camera": "pan",
+      "ref": "prop",
+      "action": "Steel examination table at edge height, exact impact moment of a bare palm contacting cold steel surface, black sleeve, only hand and table sharp, blue shadow."
+    },
+    {
+      "id": 19,
+      "start": 721,
+      "end": 764,
+      "frames": 43,
+      "beat": "Дальний план коридора. Потолочный свет оставляет дверной проём в темноте.",
+      "camera": "push",
+      "ref": "corridor",
+      "action": "Deep empty corridor of an abandoned tiled hospital at night, narrow cold overhead light near camera, rows recede into darkness, one dark closed ward door, no figure."
+    },
+    {
+      "id": 20,
+      "start": 764,
+      "end": 803,
+      "frames": 39,
+      "beat": "С пола. Под закрытой дверью перетекает тонкая тень.",
+      "camera": "static",
+      "ref": "door",
+      "action": "Extreme ground-level macro of a narrow gap under a fully closed gray metal hospital door, a thin shadow interrupts the line of cool light, textured tile, no figure visible."
+    },
+    {
+      "id": 21,
+      "start": 803,
+      "end": 843,
+      "frames": 40,
+      "beat": "Со стороны стола. Джинхёк замирает и резко смотрит на дверь.",
+      "camera": "pan",
+      "ref": "side",
+      "action": "Medium side view of same very slim young Korean man frozen beside a steel examination table and turning his head toward a closed metal door, shoulders tense, black zip hoodie and gray tee, no other person."
+    },
+    {
+      "id": 22,
+      "start": 843,
+      "end": 900,
+      "frames": 57,
+      "beat": "Финальный крупный план. Закрытая дверь и неподвижная ручка. Свет медленно гаснет.",
+      "camera": "push",
+      "ref": "door",
+      "action": "Close three-quarter view of the cold scratched horizontal lever on one fully closed charcoal blue steel hospital door inside a dark tiled room. Deepest shadow on the jamb, very subtle crimson reflection. No person."
+    }
+  ]
+}
